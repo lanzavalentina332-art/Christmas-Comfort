@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#FFF1E1"><meta name="description" content="Christmas Comfort creates beautiful, cozy Christmas cushions in soft pastel colors.">
+<title>Our Vision | Christmas Comfort</title><link rel="stylesheet" href="styles.css"></head><body>
+
+<header><div class="nav">
+  <a class="brand" href="index.html"><span class="brand-mark">❄</span><span>Christmas Comfort</span></a>
+  <button class="menu-button" aria-label="Open navigation" aria-expanded="false">☰</button>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="who-we-are.html">Who We Are</a>
+    <a href="mission.html">Mission</a>
+    <a href="vision.html">Vision</a>
+    <a href="products.html">Cushion Gallery</a>
+  </nav>
+</div></header>
+<main>
+<section class="page-hero" style="background:linear-gradient(125deg,var(--lavender),var(--cream) 62%,var(--pink))"><div class="wrap"><span class="eyebrow">Where we are going</span><h1>Our Vision</h1><p class="lead" style="margin:0 auto">Inspiring cozy homes, one cushion at a time.</p></div></section>
+<section class="content-panel"><div class="split"><div><span style="font-size:4rem">✨</span><h2>A brand remembered for its magic.</h2></div><div><p class="lead">Our vision is to become a recognized brand of Christmas cushions, known for our creativity, quality, and unique designs.</p><p>We want to inspire families to decorate their homes with love, comfort, and the magic of Christmas. We imagine a future where Christmas Comfort is part of warm holiday traditions and helps make every festive space feel personal and joyful.</p></div></div>
+<div class="quote" style="background:var(--lavender)">Our dream is to bring pastel charm and heartfelt comfort to Christmas homes everywhere.</div><div class="actions"><a class="btn" href="products.html">Explore our designs →</a><a class="btn secondary" href="mission.html">Our mission</a></div></section>
+</main>
+<footer><div class="wrap footer-inner">
+  <div><strong>Christmas Comfort ❄</strong><p>A Pastel Christmas, Full of Love and Comfort.</p></div>
+  <p>Made with love for cozy Christmas homes · © <span class="year"></span></p>
+</div></footer>
+<script>
+const button=document.querySelector('.menu-button'), navMenu=document.querySelector('nav');
+if(button){button.addEventListener('click',()=>{const opened=navMenu.classList.toggle('open');button.setAttribute('aria-expanded',opened?'true':'false')})}
+document.querySelectorAll('nav a').forEach(a=>{if(a.getAttribute('href')===location.pathname.split('/').pop())a.classList.add('active')});
+document.querySelectorAll('.year').forEach(el=>el.textContent=new Date().getFullYear());
+</script>
+</body></html>

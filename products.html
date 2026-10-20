@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#FFF1E1"><meta name="description" content="Christmas Comfort creates beautiful, cozy Christmas cushions in soft pastel colors.">
+<title>Cushion Gallery | Christmas Comfort</title><link rel="stylesheet" href="styles.css"></head><body>
+
+<header><div class="nav">
+  <a class="brand" href="index.html"><span class="brand-mark">❄</span><span>Christmas Comfort</span></a>
+  <button class="menu-button" aria-label="Open navigation" aria-expanded="false">☰</button>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="who-we-are.html">Who We Are</a>
+    <a href="mission.html">Mission</a>
+    <a href="vision.html">Vision</a>
+    <a href="products.html">Cushion Gallery</a>
+  </nav>
+</div></header>
+<main>
+<section class="page-hero" style="background:linear-gradient(125deg,var(--blue),var(--cream) 62%,var(--mint))"><div class="wrap"><span class="eyebrow">A peek at our collection</span><h1>Cushion Gallery</h1><p class="lead" style="margin:0 auto">Festive characters, snowy scenes, and cozy details for your Christmas home.</p></div></section>
+<section class="section"><div class="wrap"><div class="section-head"><h2>Find your favorite festive friend</h2><p>Every design adds its own little touch of Christmas joy.</p></div><div class="gallery">
+<article class="product"><img src="assets/snoopy-cushion.png" alt="Winter character cushion with Santa hat and red scarf"><h3>Santa Hat Hugs</h3></article>
+<article class="product"><img src="assets/santa-house-cushion.png" alt="Santa Claus in front of a decorated Christmas cottage"><h3>Santa's Cozy Cottage</h3></article>
+<article class="product"><img src="assets/snowman-cushion.png" alt="Snowman in a blue hat and red scarf in a snowy village"><h3>Snowy Day</h3></article>
+<article class="product"><img src="assets/gnome-cushion.png" alt="Christmas gnome with a red striped hat and candy cane"><h3>Sweet Christmas Gnome</h3></article>
+</div><div class="quote" style="background:var(--pink);text-align:center">Which cushion would make your home feel more magical?</div></div></section>
+</main>
+<footer><div class="wrap footer-inner">
+  <div><strong>Christmas Comfort ❄</strong><p>A Pastel Christmas, Full of Love and Comfort.</p></div>
+  <p>Made with love for cozy Christmas homes · © <span class="year"></span></p>
+</div></footer>
+<script>
+const button=document.querySelector('.menu-button'), navMenu=document.querySelector('nav');
+if(button){button.addEventListener('click',()=>{const opened=navMenu.classList.toggle('open');button.setAttribute('aria-expanded',opened?'true':'false')})}
+document.querySelectorAll('nav a').forEach(a=>{if(a.getAttribute('href')===location.pathname.split('/').pop())a.classList.add('active')});
+document.querySelectorAll('.year').forEach(el=>el.textContent=new Date().getFullYear());
+</script>
+</body></html>
